@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <header>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-page="/Logout" asp-page-handler="Logout">Logout</a>
+            @User.Identity.Name
+        }
+        else
+        {
+            <a asp-page="/Login">Login</a>
+        }
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>@DateTime.Now.Year</p>
+    </footer>
+
+    <script src="~/js/site.js"></script>
+</body>
+
+</html>

@@ -7,8 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj" />
+    <Folder Include="Pages/Shared/" />
+    <Folder Include="wwwroot/" />
+    <Folder Include="wwwroot/css/" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.7" />
   </ItemGroup>
 
 </Project>
